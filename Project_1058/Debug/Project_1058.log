@@ -1,0 +1,5 @@
+﻿  Project_1058.cpp
+E:\POO\Project_1058\Project_1058.cpp(35,12): warning C4101: 'er': unreferenced local variable
+E:\POO\Project_1058\Project_1058.cpp(103,12): warning C4101: 'er': unreferenced local variable
+E:\POO\Project_1058\Project_1058.cpp(292,1): warning C4326: return type of 'main' should be 'int' instead of 'void'
+  Project_1058.vcxproj -> E:\POO\Project_1058\Debug\Project_1058.exe
