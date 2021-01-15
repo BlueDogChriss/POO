@@ -27,6 +27,9 @@
     <ClCompile Include="meniu.cpp">
       <Filter>Resource Files</Filter>
     </ClCompile>
+    <ClCompile Include="produse.cpp">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="credentiale.h">
@@ -39,6 +42,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="meniu.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="produse.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

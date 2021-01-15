@@ -141,6 +141,7 @@
   <ItemGroup>
     <ClCompile Include="login.cpp" />
     <ClCompile Include="meniu.cpp" />
+    <ClCompile Include="produse.cpp" />
     <ClCompile Include="ProiectPOO.cpp" />
     <ClCompile Include="credentiale.cpp" />
   </ItemGroup>
@@ -148,6 +149,7 @@
     <ClInclude Include="credentiale.h" />
     <ClInclude Include="login.h" />
     <ClInclude Include="meniu.h" />
+    <ClInclude Include="produse.h" />
     <ClInclude Include="user.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -1,8 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Project_1058"
+    "\\ProiectPOO",
+    "\\ProiectPOO\\Debug",
+    "\\ProiectPOO\\Debug\\ProiectPOO.tlog"
   ],
-  "SelectedNode": "\\Project_1058\\Project_1058.cpp",
+  "SelectedNode": "\\ProiectPOO\\Debug\\ProiectPOO.tlog\\ProiectPOO.lastbuildstate",
   "PreviewInSolutionExplorer": false
 }
