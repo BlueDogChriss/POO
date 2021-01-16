@@ -5,9 +5,11 @@
 #include"user.h"
 #include"login.h"
 #include"meniu.h"
+#include"produse.h"
+#include"componenteGaming.h"
+#include"componenteOffice.h"
 
 using namespace std;
-
 
 int main()
 {
