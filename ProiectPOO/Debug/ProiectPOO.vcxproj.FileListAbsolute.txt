@@ -1,2 +1,4 @@
 C:\Users\bianca\source\repos\ProiectPOO\Debug\ProiectPOO.exe
 C:\Users\bianca\source\repos\ProiectPOO\Debug\ProiectPOO.pdb
+E:\POO\ProiectPOO\Debug\ProiectPOO.exe
+E:\POO\ProiectPOO\Debug\ProiectPOO.pdb
