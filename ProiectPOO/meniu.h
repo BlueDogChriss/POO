@@ -1,6 +1,8 @@
 #pragma once
 #include<iostream>
 #include "user.h"
+#include "produse.h"
+
 using namespace std;
 
 class Meniu {

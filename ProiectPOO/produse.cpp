@@ -13,19 +13,21 @@ Produse::Produse() {
 	this->anFabricatie = "Produs fara an de fabricare\n";
 };
 
-Produse::Produse(int idProdus, int garantie, string anFabricatie, string denumire, string firma, bool disponibilitate) {
+Produse::Produse(int idProdus, int garantie, string anFabricatie, string denumire, string firma, bool disponibilitate, float pret) {
 	if (idProdus == 0)
 		throw new exception("Nu exista acest produs\n");
-	else if (denumire.empty()) 
+	else if (denumire.empty())
 		throw new exception("Nu exista produsul\n");
 	else if (disponibilitate == false)
 		throw new exception("Produsu nu este disponibil\n");
-	else if (anFabricatie.empty()) 
+	else if (anFabricatie.empty())
 		throw new exception("Anul fabricatiei lipsa\n");
-	else if (firma.empty()) 
+	else if (firma.empty())
 		throw new exception("Produs fara firma\n");
-	else if (garantie == 0) 
+	else if (garantie == 0)
 		throw new exception("Acest produs nu are garantie\n");
+	else if (pret >= 0)
+		throw new exception("Pretul nu poate sa fie mai mic decat 0\n");
 	else {
 		this->idProdus = idProdus;
 		this->denumire = denumire;
@@ -33,6 +35,7 @@ Produse::Produse(int idProdus, int garantie, string anFabricatie, string denumir
 		this->anFabricatie = anFabricatie;
 		this->firma = firma;
 		this->garantie = garantie;
+		this->pret = pret;
 	}
 
 
@@ -45,6 +48,7 @@ Produse::Produse(const Produse& p)
 	this->anFabricatie = p.anFabricatie;
 	this->firma = p.firma;
 	this->garantie = p.garantie;
+	this->pret = p.pret;
 }
 
 void Produse::operator=(Produse p)
@@ -55,6 +59,7 @@ void Produse::operator=(Produse p)
 	this->anFabricatie = p.anFabricatie;
 	this->firma = p.firma;
 	this->garantie = p.garantie;
+	this->pret = p.pret;
 }
 
 int Produse::getIdProdus()
@@ -80,6 +85,10 @@ string Produse::getFirma()
 int Produse::getGarantie()
 {
 	return garantie;
+}
+float Produse::getPret()
+{
+	return pret;
 }
 
 
@@ -115,6 +124,44 @@ void Produse::setGarantie(int gar){
 
 	this->garantie = gar;
 	
+}
+void Produse::setPret(float pret) {
+	this->pret = pret;
+}
+
+//op +=
+Produse Produse::operator-=(int x)
+{
+	pret += x;
+	return *this;
+}
+
+string Produse::toString()
+{
+	return "Produs\n";
+}
+
+void Produse::setAttributes()
+{
+
+}
+
+/*Produse Produse::operator-=(int x)
+{
+	return *this;
+}*/
+
+ifstream& operator>>(ifstream& fin, Produse& p)
+{
+	fin.read((char*)&p.idProdus, sizeof(int));
+	fin.read((char*)&p.denumire, sizeof(string));
+	fin.read((char*)&p.disponibilitate, sizeof(bool));
+	fin.read((char*)&p.anFabricatie, sizeof(string));
+	fin.read((char*)&p.firma, sizeof(string));
+	fin.read((char*)&p.garantie, sizeof(int));
+	fin.read((char*)&p.pret, sizeof(float));
+
+	return fin;
 }
 
 Produse::~Produse()

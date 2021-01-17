@@ -2,6 +2,7 @@
 #include<iostream>
 #include<string>
 #include<vector>
+#include"produse.h"
 #include "credentiale.h"
 
 class User : public Credentiale {
@@ -21,6 +22,7 @@ public:
 	void setNume(string nume);
 	void setPrenume(string nume);
 	void greeting();
+
 	~User();
 
 };

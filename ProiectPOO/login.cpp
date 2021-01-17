@@ -19,7 +19,7 @@ void Login::meniu(int tipUser) {
         cout << "4. Editeaza produse din magazin\n";
         cout << "0. Exit\n";
     }
-    else {
+    else if (tipUser == 2) {
         cout << "\nCe actiune doriti sa realizati?\n";
         cout << "1. Afiseaza produse\n";
         cout << "2. Adauga produs in cos\n";
@@ -27,4 +27,5 @@ void Login::meniu(int tipUser) {
         cout << "4. Sterge produs din cos\n";
         cout << "0. Exit\n";
     }
+    else cout << "Input Gresit! Va rugam reintroduceti!\n";
 }
