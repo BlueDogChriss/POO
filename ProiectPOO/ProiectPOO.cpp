@@ -8,9 +8,11 @@
 #include "produse.h"
 #include"credentiale.h"
 
+#include"produse.h"
+#include"componenteGaming.h"
+#include"componenteOffice.h"
 
 using namespace std;
-
 
 int main()
 {
