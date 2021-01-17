@@ -5,10 +5,8 @@
 #include"user.h"
 #include"login.h"
 #include"meniu.h"
-#include "produse.h"
-#include"credentiale.h"
-
 #include"produse.h"
+#include"credentiale.h"
 #include"componenteGaming.h"
 #include"componenteOffice.h"
 
