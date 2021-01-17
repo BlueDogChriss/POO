@@ -16,7 +16,7 @@ public:
 	ComponenteOffice();
 	ComponenteOffice(int idProdus, int garantie, string anFabricatie, string denumire, string firma, string placaVideoIntegrata, double autonomieBaterie, int ssd, bool performant);
 	ComponenteOffice(const ComponenteOffice& o);
-	void operator=(ComponenteOffice g);
+	void operator=(ComponenteOffice o);
 	~ComponenteOffice();
 
 	//getteri
@@ -31,4 +31,4 @@ public:
 	void setSsd(int ssd);
 	void setPerformant(bool performant);
 
-}
+};

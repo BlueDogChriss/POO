@@ -5,7 +5,7 @@
 using namespace std;
 
 ComponenteOffice::ComponenteOffice() {
-	this->placaVideoIntegrata = "Nu exista informatii despre placa video integrata\n";
+	this->placaVideoIntegrata = "Nu exista informatii despre placa video integrata.\n";
 	this->autonomieBaterie = 0;
 	this->ssd = 0;
 	this->performant = false;
@@ -18,7 +18,7 @@ ComponenteOffice::ComponenteOffice(int idProdus, int garantie, string anFabricat
 	else if (ssd == 0)
 		throw new exception("Nu exista informatii despre ssd.\n");
 	else if (performant = false)
-		throw new exception("Nu este performant");
+		throw new exception("Nu este performant.");
 	else {
 		this->placaVideoIntegrata = placaVideoIntegrata;
 		this->autonomieBaterie = autonomieBaterie;
@@ -39,7 +39,7 @@ void ComponenteOffice::operator=(ComponenteOffice o) {
 	this->performant = o.performant;
 }
 string ComponenteOffice::getPlacaVideoIntegrata() {
-	return placaVideoIntegrata
+	return placaVideoIntegrata;
 }
 double ComponenteOffice::getAutonomieBaterie() {
 	return autonomieBaterie;
@@ -52,12 +52,12 @@ bool ComponenteOffice::estePerformant() {
 }
 void setPlacaVideoIntegrata(string placaVideoIntegrata) {
 	if (!placaVideoIntegrata.empty()) {
-		this->placaVideoIntegrata=placaVideoIntegrata
+		this->placaVideoIntegrata = placaVideoIntegrata;
 	}
 }
 void setAutonomieBaterie(double autonomieBaterie) {
 	if (autonomieBaterie != 0.0) {
-		this->autonomieBaterie=autonomieBaterie
+		this->autonomieBaterie = autonomieBaterie;
 	}
 }
 void setSsd(int ssd) {
