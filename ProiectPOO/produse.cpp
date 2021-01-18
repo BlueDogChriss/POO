@@ -14,33 +14,33 @@ Produse::Produse() {
 };
 
 Produse::Produse(int idProdus, int garantie, string anFabricatie, string denumire, string firma, bool disponibilitate, float pret) {
-	if (idProdus == 0)
-		throw new exception("Nu exista acest produs\n");
-	else if (denumire.empty())
-		throw new exception("Nu exista produsul\n");
-	else if (disponibilitate == false)
-		throw new exception("Produsu nu este disponibil\n");
-	else if (anFabricatie.empty())
-		throw new exception("Anul fabricatiei lipsa\n");
-	else if (firma.empty())
-		throw new exception("Produs fara firma\n");
-	else if (garantie == 0)
-		throw new exception("Acest produs nu are garantie\n");
-	else if (pret >= 0)
-		throw new exception("Pretul nu poate sa fie mai mic decat 0\n");
-	else {
+	if (idProdus >= 0)
 		this->idProdus = idProdus;
-		this->denumire = denumire;
-		this->disponibilitate = disponibilitate;
-		this->anFabricatie = anFabricatie;
-		this->firma = firma;
+	else
+		cout<< "ID invalid";
+	if (garantie != 0)
 		this->garantie = garantie;
+	else
+		this->garantie = 0;
+	if (anFabricatie != " ")
+		this->anFabricatie = anFabricatie;
+	else
+		this->anFabricatie = " ";
+	if (denumire != " ")
+		this->denumire = denumire;
+	else
+		this->denumire = "Produs fara nume.";
+	if (firma != " ")
+		this->firma = firma;
+	else
+		this->firma = " ";
+	this->disponibilitate = disponibilitate;
+	if (pret >= 0.0)
 		this->pret = pret;
-	}
-
-
+	else
+		this->pret = 0.0;
 };
-Produse::Produse(const Produse& p)
+Produse::Produse(const Produse &p)
 {
 	this->idProdus = p.idProdus;
 	this->denumire = p.denumire;
@@ -63,8 +63,8 @@ void Produse::operator=(Produse p)
 }
 
 int Produse::getIdProdus()
-{ 
-return idProdus; 
+{
+	return idProdus;
 }
 string Produse::getDenumire()
 {
@@ -76,7 +76,7 @@ bool Produse::esteDisponibil()
 }
 string Produse::getAnFabricatie()
 {
-return anFabricatie;
+	return anFabricatie;
 }
 string Produse::getFirma()
 {
@@ -101,36 +101,36 @@ void Produse::setIdProdus(int idProdus) {
 void Produse::setDenumire(string denum)
 {
 	if (denum != " ") {
-		this->denumire= denum;
-}
+		this->denumire = denum;
+	}
 }
 void Produse::setDisponibilitate(bool disp) {
 	this->disponibilitate = disp;
 }
 void Produse::setAnFabricatie(string anFab)
-	{
-		if (anFab != " ") {
-			this->anFabricatie = anFab;
-		}
+{
+	if (anFab != " ") {
+		this->anFabricatie = anFab;
+	}
 }
 
 void Produse::setFirma(string fir)
 {
-		if (fir != " ") {	
-			this->firma = fir;
-		}
+	if (fir != " ") {
+		this->firma = fir;
+	}
 }
-void Produse::setGarantie(int gar){
+void Produse::setGarantie(int gar) {
 
 	this->garantie = gar;
-	
+
 }
 void Produse::setPret(float pret) {
 	this->pret = pret;
 }
 
 //op +=
-Produse Produse::operator-=(int x)
+Produse Produse::operator+=(int x)
 {
 	pret += x;
 	return *this;
@@ -146,10 +146,10 @@ void Produse::setAttributes()
 
 }
 
-/*Produse Produse::operator-=(int x)
+Produse Produse::operator-=(int x)
 {
 	return *this;
-}*/
+}
 
 ifstream& operator>>(ifstream& fin, Produse& p)
 {

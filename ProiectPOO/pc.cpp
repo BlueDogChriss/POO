@@ -4,78 +4,63 @@
 
 using namespace std;
 
-Pc::Pc() {
+PC::PC() :Produse::Produse(){
 	this->tip = "Nu exista informatii despre tipul PC-ului.\n";
 	this->culoare = "Nu exista informatii despre culoare.\n";
 	this->greutate = 0;
 }
-Pc::Pc(int idProdus, int garantie, string anFabricatie, string denumire, string firma,
-	bool disponibilitate, bool rgb, string placaVideoDedicata, int frecventa, string procesor, int frecventaProcesor,
-	string tip, string culoare, float greutate) {
-	if (tip.empty())
-		throw new exception("Nu exista informatii despre tipul PC-ului.\n");
-	else if (culoare.empty())
-		throw new exception("Nu exista informatii despre culoare.\n");
-	else if (greutate == 0)
-		throw new exception("Nu exista informatii despre greutate.\n");
-	else {
+PC::PC(int idProdus, int garantie, string anFabricatie, string denumire, string firma, bool disponibilitate, float pret, 
+	string tip, string culoare, float greutate) :Produse::Produse(idProdus, garantie, anFabricatie, denumire,firma,disponibilitate, pret) {
+	if (tip != " ")
 		this->tip = tip;
+	else
+		this->tip = " ";
+	if (culoare != " ")
 		this->culoare = culoare;
+	else
+		this->culoare = " ";
+	if (greutate > 0)
 		this->greutate = greutate;
-	}
+	else
+		this->greutate = 0.0;
 }
 
-Pc::Pc(int idProdus, int garantie, string anFabricatie, string denumire, string firma,
-	string placaVideoIntegrata, double autonomieBaterie, int ssd, bool performant,
-	string tip, string culoare, float greutate) {
-	if (tip.empty())
-		throw new exception("Nu exista informatii despre tipul PC-ului.\n");
-	else if (culoare.empty())
-		throw new exception("Nu exista informatii despre culoare.\n");
-	else if (greutate == 0)
-		throw new exception("Nu exista informatii despre greutate.\n");
-	else {
-		this->tip = tip;
-		this->culoare = culoare;
-		this->greutate = greutate;
-	}
-}
 
-Pc::Pc(const Pc& p) {
+PC::PC(PC &p) :Produse::Produse(p) {
 	this->tip = p.tip;
 	this->culoare = p.culoare;
 	this->greutate = p.greutate;
 }
-void Pc::operator=(Pc p) {
+void PC::operator=(PC p) {
 	this->tip = p.tip;
 	this->culoare = p.culoare;
 	this->greutate = p.greutate;
 }
 
-string Pc::getTip() {
+string PC::getTip() {
 	return tip;
 }
-string Pc::getCuloare() {
+string PC::getCuloare() {
 	return culoare;
 }
-float Pc::getGreutate() {
+float PC::getGreutate() {
 	return greutate;
 }
-void setTip(string tip) {
+void PC::setTip(string tip) {
 	if (!tip.empty()) {
 		this->tip = tip;
 	}
 }
-void setCuloare(string culoare) {
+void PC::setCuloare(string culoare) {
 	if (!culoare.empty()) {
 		this->culoare = culoare;
 	}
 }
-void setGreutate(float greutate) {
+void PC::setGreutate(float greutate) {
 	if (greutate != 0) {
 		this->greutate = greutate;
 	}
 }
-Pc::~Pc() {
+PC::~PC() {
 
 }

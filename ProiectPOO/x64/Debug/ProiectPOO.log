@@ -1,2 +1,1 @@
-﻿  ProiectPOO.cpp
-  ProiectPOO.vcxproj -> E:\AAAAAAAAAAAA\POO\ProiectPOO\x64\Debug\ProiectPOO.exe
+﻿Debug\credentiale.obj : fatal error LNK1112: module machine type 'x86' conflicts with target machine type 'x64'

@@ -139,18 +139,110 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="admin.cpp" />
+    <ClCompile Include="componenteGaming.cpp" />
+    <ClCompile Include="componenteOffice.cpp" />
     <ClCompile Include="login.cpp" />
     <ClCompile Include="meniu.cpp" />
+    <ClCompile Include="pc.cpp" />
     <ClCompile Include="produse.cpp" />
     <ClCompile Include="ProiectPOO.cpp" />
     <ClCompile Include="credentiale.cpp" />
+    <ClCompile Include="IProduse.cpp" />
+    <ClCompile Include="user.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="admin.h" />
+    <ClInclude Include="componenteGaming.h" />
+    <ClInclude Include="componenteOffice.h" />
     <ClInclude Include="credentiale.h" />
+    <ClInclude Include="IProduse.h" />
     <ClInclude Include="login.h" />
     <ClInclude Include="meniu.h" />
+    <ClInclude Include="pc.h" />
     <ClInclude Include="produse.h" />
     <ClInclude Include="user.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".vs\ProjectSettings.json" />
+    <None Include=".vs\slnx.sqlite" />
+    <None Include=".vs\VSWorkspaceState.json" />
+    <None Include="0" />
+    <None Include="Debug\ProiectPOO.exe">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="Debug\ProiectPOO.exe.recipe">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="Debug\ProiectPOO.ilk">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="Debug\ProiectPOO.pdb">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="Debug\ProiectPOO.tlog\CL.command.1.tlog">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="Debug\ProiectPOO.tlog\CL.read.1.tlog">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="Debug\ProiectPOO.tlog\CL.write.1.tlog">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="Debug\ProiectPOO.tlog\link.command.1.tlog">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="Debug\ProiectPOO.tlog\link.read.1.tlog">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="Debug\ProiectPOO.tlog\link.write.1.tlog">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="Debug\ProiectPOO.tlog\ProiectPOO.lastbuildstate">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="Debug\vc142.idb">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="Debug\vc142.pdb">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Debug\ProiectPOO.Build.CppClean.log">
+      <DeploymentContent>true</DeploymentContent>
+    </Text>
+    <Text Include="Debug\ProiectPOO.log">
+      <DeploymentContent>true</DeploymentContent>
+    </Text>
+    <Text Include="Debug\ProiectPOO.vcxproj.FileListAbsolute.txt">
+      <DeploymentContent>true</DeploymentContent>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <Object Include="Debug\credentiale.obj">
+      <DeploymentContent>true</DeploymentContent>
+    </Object>
+    <Object Include="Debug\login.obj">
+      <DeploymentContent>true</DeploymentContent>
+    </Object>
+    <Object Include="Debug\meniu.obj">
+      <DeploymentContent>true</DeploymentContent>
+    </Object>
+    <Object Include="Debug\produse.obj">
+      <DeploymentContent>true</DeploymentContent>
+    </Object>
+    <Object Include="Debug\ProiectPOO.obj">
+      <DeploymentContent>true</DeploymentContent>
+    </Object>
+    <Object Include="x64\Debug\componenteGaming.obj" />
+    <Object Include="x64\Debug\componenteOffice.obj" />
+    <Object Include="x64\Debug\credentiale.obj" />
+    <Object Include="x64\Debug\login.obj" />
+    <Object Include="x64\Debug\meniu.obj" />
+    <Object Include="x64\Debug\pc.obj" />
+    <Object Include="x64\Debug\produse.obj" />
+    <Object Include="x64\Debug\ProiectPOO.obj" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

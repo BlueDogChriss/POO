@@ -30,6 +30,24 @@
     <ClCompile Include="produse.cpp">
       <Filter>Resource Files</Filter>
     </ClCompile>
+    <ClCompile Include="componenteGaming.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="componenteOffice.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="pc.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="admin.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="user.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="IProduse.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="credentiale.h">
@@ -47,5 +65,59 @@
     <ClInclude Include="produse.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="componenteGaming.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="componenteOffice.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="pc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="admin.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IProduse.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="0" />
+    <None Include=".vs\ProjectSettings.json" />
+    <None Include=".vs\slnx.sqlite" />
+    <None Include=".vs\VSWorkspaceState.json" />
+    <None Include="Debug\vc142.pdb" />
+    <None Include="Debug\vc142.idb" />
+    <None Include="Debug\ProiectPOO.pdb" />
+    <None Include="Debug\ProiectPOO.ilk" />
+    <None Include="Debug\ProiectPOO.exe.recipe" />
+    <None Include="Debug\ProiectPOO.exe" />
+    <None Include="Debug\ProiectPOO.tlog\ProiectPOO.lastbuildstate" />
+    <None Include="Debug\ProiectPOO.tlog\link.write.1.tlog" />
+    <None Include="Debug\ProiectPOO.tlog\link.read.1.tlog" />
+    <None Include="Debug\ProiectPOO.tlog\link.command.1.tlog" />
+    <None Include="Debug\ProiectPOO.tlog\CL.write.1.tlog" />
+    <None Include="Debug\ProiectPOO.tlog\CL.command.1.tlog" />
+    <None Include="Debug\ProiectPOO.tlog\CL.read.1.tlog" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Debug\ProiectPOO.vcxproj.FileListAbsolute.txt" />
+    <Text Include="Debug\ProiectPOO.log" />
+    <Text Include="Debug\ProiectPOO.Build.CppClean.log" />
+  </ItemGroup>
+  <ItemGroup>
+    <Object Include="Debug\ProiectPOO.obj" />
+    <Object Include="Debug\produse.obj" />
+    <Object Include="Debug\meniu.obj" />
+    <Object Include="Debug\login.obj" />
+    <Object Include="Debug\credentiale.obj" />
+    <Object Include="x64\Debug\pc.obj" />
+    <Object Include="x64\Debug\componenteOffice.obj" />
+    <Object Include="x64\Debug\componenteGaming.obj" />
+    <Object Include="x64\Debug\login.obj" />
+    <Object Include="x64\Debug\meniu.obj" />
+    <Object Include="x64\Debug\produse.obj" />
+    <Object Include="x64\Debug\ProiectPOO.obj" />
+    <Object Include="x64\Debug\credentiale.obj" />
   </ItemGroup>
 </Project>

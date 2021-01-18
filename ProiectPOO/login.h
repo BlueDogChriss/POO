@@ -10,7 +10,7 @@ public:
 	void login();
 	void meniu(int tipUser);
 	void showProduseToAdd();
-	//void showAllProduse(vector<Produse*> produse);
-	void addProduse();
+	void showAllProduse(vector<Produse*> produse);
+	void addProduseToCos();
 
 };

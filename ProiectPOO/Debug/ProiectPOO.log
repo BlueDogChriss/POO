@@ -1,6 +1,6 @@
-﻿  login.cpp
-  meniu.cpp
-  produse.cpp
-  ProiectPOO.cpp
-  Generating Code...
-  ProiectPOO.vcxproj -> E:\POO\ProiectPOO\Debug\ProiectPOO.exe
+﻿Debug\credentiale.obj : warning LNK4042: object specified more than once; extras ignored
+Debug\login.obj : warning LNK4042: object specified more than once; extras ignored
+Debug\meniu.obj : warning LNK4042: object specified more than once; extras ignored
+Debug\produse.obj : warning LNK4042: object specified more than once; extras ignored
+Debug\ProiectPOO.obj : warning LNK4042: object specified more than once; extras ignored
+x64\Debug\componenteGaming.obj : fatal error LNK1112: module machine type 'x64' conflicts with target machine type 'x86'

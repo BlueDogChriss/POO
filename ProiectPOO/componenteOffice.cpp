@@ -6,43 +6,35 @@ using namespace std;
 
 ComponenteOffice::ComponenteOffice() {
 	this->placaVideoIntegrata = "Nu exista informatii despre placa video integrata.\n";
-	this->autonomieBaterie = 0;
 	this->ssd = 0;
 	this->performant = false;
 }
-ComponenteOffice::ComponenteOffice(int idProdus, int garantie, string anFabricatie, string denumire, string firma, string placaVideoIntegrata, double autonomieBaterie, int ssd, bool performant) {
-	if (placaVideoIntegrata.empty())
-		throw new exception("Nu exista informatii despre placa video integrata.\n");
-	else if (autonomieBaterie == 0.0)
-		throw new exception("Nu exista informatii despre autonomia bateriei.\n");
-	else if (ssd == 0)
-		throw new exception("Nu exista informatii despre ssd.\n");
-	else if (performant = false)
-		throw new exception("Nu este performant.");
-	else {
+ComponenteOffice::ComponenteOffice(int idProdus, int garantie, string anFabricatie, string denumire, string firma, 
+	bool disponibilitate,float pret, string tip, string culoare, float greutate, string placaVideoIntegrata, int ssd, 
+	bool performant) {
+	if (placaVideoIntegrata != " ")
 		this->placaVideoIntegrata = placaVideoIntegrata;
-		this->autonomieBaterie = autonomieBaterie;
+	else
+		this->placaVideoIntegrata = " ";
+	if (ssd >= 0)
 		this->ssd = ssd;
-		this->performant = performant;
-	}
+	else
+		this->ssd = 0;
+	this->performant = performant;
+	
 }
-ComponenteOffice::ComponenteOffice(const ComponenteOffice& o) {
+ComponenteOffice::ComponenteOffice(ComponenteOffice& o):PC(o) {
 	this->placaVideoIntegrata = o.placaVideoIntegrata;
-	this->autonomieBaterie = o.autonomieBaterie;
 	this->ssd = o.ssd;
 	this->performant = o.performant;
 }
 void ComponenteOffice::operator=(ComponenteOffice o) {
 	this->placaVideoIntegrata = o.placaVideoIntegrata;
-	this->autonomieBaterie = o.autonomieBaterie;
 	this->ssd = o.ssd;
 	this->performant = o.performant;
 }
 string ComponenteOffice::getPlacaVideoIntegrata() {
 	return placaVideoIntegrata;
-}
-double ComponenteOffice::getAutonomieBaterie() {
-	return autonomieBaterie;
 }
 int ComponenteOffice::getSsd() {
 	return ssd;
@@ -50,25 +42,127 @@ int ComponenteOffice::getSsd() {
 bool ComponenteOffice::estePerformant() {
 	return performant;
 }
-void setPlacaVideoIntegrata(string placaVideoIntegrata) {
+void ComponenteOffice::setPlacaVideoIntegrata(string placaVideoIntegrata) {
 	if (!placaVideoIntegrata.empty()) {
 		this->placaVideoIntegrata = placaVideoIntegrata;
 	}
 }
-void setAutonomieBaterie(double autonomieBaterie) {
-	if (autonomieBaterie != 0.0) {
-		this->autonomieBaterie = autonomieBaterie;
-	}
-}
-void setSsd(int ssd) {
+void ComponenteOffice::setSsd(int ssd) {
 	if (ssd != 0) {
 		this->ssd = ssd;
 	}
 }
-void setPerformant(bool performant) {
+void ComponenteOffice::setPerformant(bool performant) {
 	if (performant != false) {
 		this->performant = performant;
 	}
+}
+Produse ComponenteOffice::operator-=(int x) {
+	garantie -= x;
+	return *this;
+}
+void ComponenteOffice::setAttributes() {
+	float fIn;
+	string sIn;
+	int iIn;
+	getline(cin, sIn);
+	cout << "\n Introduceti ID: ";
+	cin >> iIn;
+	if (!cin.good()) {
+		cin.clear();
+		cin.ignore(9999, '\n');
+	}
+	else {
+		setIdProdus(iIn);
+	}
+
+	cout << "\nIntroduceti anul fabricarii: ";
+	getline(cin, sIn);
+	getline(cin, sIn);
+	setAnFabricatie(sIn);
+
+	cout << "\n Introduceti garantia: ";
+	if (!cin.good()) {
+		cin.clear();
+		cin.ignore(9999, '\n');
+	}
+	else {
+		setGarantie(iIn);
+	}
+
+	cout << "\nIntroduceti denumire: ";
+	getline(cin, sIn);
+	getline(cin, sIn);
+	setDenumire(sIn);
+
+
+	cout << "\n Introduceti firma: ";
+	getline(cin, sIn);
+	getline(cin, sIn);
+	setFirma(sIn);
+
+	cout << "\nIntroduceti pretul: ";
+	cin >> fIn;
+	if (!cin.good()) {
+		cin.clear();
+		cin.ignore(9999, '\n');
+	}
+	else {
+		setPret(fIn);
+	}
+
+	cout << "\nIntroduceti tipul: ";
+	getline(cin, sIn);
+	getline(cin, sIn);
+	setTip(sIn);
+
+	cout << "\nIntroduceti culoarea: ";
+	getline(cin, sIn);
+	getline(cin, sIn);
+	setCuloare(sIn);
+
+	cout << "\nIntroduceti greutatea: ";
+	cin >> fIn;
+	if (!cin.good()) {
+		cin.clear();
+		cin.ignore(9999, '\n');
+	}
+	else {
+		setGreutate(fIn);
+	}
+
+	cout << "\nIntrroduceti placa video integrata: ";
+	getline(cin, sIn);
+	getline(cin, sIn);
+	setPlacaVideoIntegrata(sIn);
+
+	cout << "\nIntroduceti marime SSD: ";
+	cin >> iIn;
+	if (!cin.good()) {
+		cin.clear();
+		cin.ignore(9999, '\n');
+	}
+	else {
+		setSsd(iIn);
+	}
+
+}
+string ComponenteOffice::toString() {
+	return "Tip produs: " + this->getTip() +
+		"\nID produs: " + to_string(this->getIdProdus()) +
+		"\nGarantie produs: " + to_string(this->getGarantie()) +
+		"\nAn fabricare produs: " + this->getAnFabricatie() +
+		"\nDenumire produs: " + this->getDenumire() +
+		"\nFirma produs: " + this->getFirma() +
+		"\nDisponibilitate produs: " + (this->esteDisponibil() ? "Da" : "Nu") +
+		"\nPret produs: " + to_string(this->getPret()) +
+		"\nCuloare produs: " + this->getCuloare() +
+		"\nGreutate produs: " + to_string(this->getGreutate()) +
+		"\nPerformanta produs: " + (this->estePerformant() ? "Da" : "Nu") +
+		"\nPlaca video produs: " + this->getPlacaVideoIntegrata() +
+		"\nMarime SSD produs: " + to_string(this->getSsd()) +
+		"\nPret produs : " + to_string(this->getPret()) +
+		"\n";
 }
 ComponenteOffice::~ComponenteOffice() {
 

@@ -1,11 +1,12 @@
 #pragma once
 #include<iostream>
+#include "IProduse.h"
 #include<string>
 #include<fstream>
 
 using namespace std;
 
-class Produse {
+class Produse : public IProdus {
 protected:
 	int idProdus;
 	int garantie;
@@ -19,12 +20,12 @@ public:
 	Produse();
 	~Produse();
 	Produse(int idProdus, int garantie, string anFabricatie, string denumire, string firma, bool disponibilitate, float pret);
-	
+
 	Produse(const Produse& p);
 	void operator=(Produse p);
 
 
-//getteri
+	//getteri
 	int getIdProdus();
 	int getGarantie();
 	string getAnFabricatie();
@@ -34,7 +35,7 @@ public:
 	float getPret();
 
 
-//setteri
+	//setteri
 	void setIdProdus(int idProdus);
 	void setGarantie(int garantie);
 	void setAnFabricatie(string anFabricatie);

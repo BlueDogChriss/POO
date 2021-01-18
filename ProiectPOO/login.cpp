@@ -3,11 +3,12 @@
 
 using namespace std;
 
-void Login::login(){
-	cout << "Pagina Login\n";
-	cout << "Alegeti tipul de utilizator\n";
-	cout << "  1. Angajat\n";
-	cout << "  2. Client\n";
+void Login::login() {
+    cout << "Pagina Login\n";
+    cout << "Alegeti tipul de utilizator\n";
+    cout << "  1. Angajat\n";
+    cout << "  2. Client\n";
+    cout << "  0. Exit\n";
 }
 
 void Login::meniu(int tipUser) {
@@ -28,4 +29,32 @@ void Login::meniu(int tipUser) {
         cout << "0. Exit\n";
     }
     else cout << "Input Gresit! Va rugam reintroduceti!\n";
+}
+
+void Login::showProduseToAdd()
+{
+    cout << endl << "Ce tip de produs doriti sa adaugati?\n";
+    cout << "1. PC/Laptop Gaming\n";
+    cout << "2. PC/Laptop Office\n";
+}
+
+void Login::showAllProduse(vector<Produse*> produse)
+{
+    vector<Produse*>::iterator i;
+    cout << "\nAfisare produse disp\n";
+    int count = 1;
+    if (produse.size())
+    {
+        for (i = produse.begin(); i != produse.end(); i++)
+        {
+            cout << count << ". " << (*i)->toString() << endl;
+            count++;
+        }
+    }
+    else cout << "\n\tNu avem produse disp mom\t\n";
+}
+
+void Login::addProduseToCos()
+{
+    cout << "\t\nIntroduceti numarul produsului din magazin: \t\n";
 }
